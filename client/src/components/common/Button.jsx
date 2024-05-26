@@ -18,7 +18,7 @@ const Button = ({
             ${dynamicColor}
             border-gray-300
             rounded-3xl
-            py-1 px-4
+            py-1 px-7
             text-[14px]
             ${addClass}
             `}>{label} {icon}</button>
