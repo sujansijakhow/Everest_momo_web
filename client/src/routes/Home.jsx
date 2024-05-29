@@ -4,10 +4,13 @@ import { FaPhone } from "react-icons/fa6";
 import { IoMdTime } from "react-icons/io";
 import { TiSocialFacebook } from "react-icons/ti";
 import { RiTiktokFill } from "react-icons/ri";
+import { useState } from "react";
 import { SlSocialInstagram } from "react-icons/sl";
 
 import Navbar from "../components/Navbar";
 import Button from "../components/common/Button";
+import Input from "../components/common/Input";
+import Map from "../components/common/Map";
 
 import Food from "../images/food.png"
 import BlackDot from "../images/blackdot.png"
@@ -21,8 +24,13 @@ import Quality from "../images/Quality.png"
 import Chef from "../images/Chef.png"
 import Party from "../images/party.png"
 import Testimonal from "../images/testimonal.png"
+import Footer from "../components/Footer";
 
 function Home() {
+    const initialPosition = { lat: 27.6915, lng: 85.342 };
+    const [currentMarkerPosition, setCurrentMarkerPosition] = useState(initialPosition);
+
+
     return (
         <div>
             <Navbar />
@@ -94,9 +102,9 @@ function Home() {
                 </div>
                 <span className="text-gray-500 text-[14px]">Browse through a varieties of recipes with fresh ingredients selected only from the best places</span>
                 <div className="flex gap-2 ">
-                    <Button label={"Buff"} addClass={"text-black border-black"} />
-                    <Button label={"Chicken"} addClass={"text-black"} />
-                    <Button label={"Veg"} addClass={"text-black"} />
+                    <Button label={"Buff"} addClass={"text-slate-900 border-slate-900"} />
+                    <Button label={"Chicken"} addClass={"text-slate-900"} />
+                    <Button label={"Veg"} addClass={"text-slate-900"} />
                 </div>
                 <div className="flex gap-3">
                     <img src={Menu1} alt="" className="w-60" />
@@ -195,9 +203,9 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className=" w-4/5 h-[600px] flex justify-center p-5 rounded-md shadow-2xl gap-5">
-                            <div className="bg-color-secondary w-1/3 p-5 rounded-md text-white text-[17px]">
-                                <div className="flex flex-col gap-4"> 
+                        <div className=" w-3/5 h-[600px] flex justify-center p-5 rounded-md shadow-2xl gap-5">
+                            <div className="bg-color-secondary w-1/3 p-5 rounded-md text-white text-[14px]">
+                                <div className="flex flex-col gap-4">
                                     <div className="flex items-center space-x-2">
                                         <FaLocationDot />
                                         <span>Our Address</span>
@@ -227,7 +235,7 @@ function Home() {
                                         <IoMdTime />
                                         <span>Our Services Time</span>
                                     </div>
-                                    
+
                                     <div className="flex gap-14">
                                         <div className="flex flex-col">
                                             <span>MON - FRI</span>
@@ -250,17 +258,51 @@ function Home() {
                                 </div>
 
                             </div>
-                            <div className="bg-black w-2/3 rounded-md">
+                            <div className="w-2/3 rounded-md flex flex-col p-5">
+                                <div className="flex w-full justify-between gap-2">
+
+                                    <Input label={"First Name"} type={"text"} />
+                                    <Input label={"Secod Name"} type={"text"} />
+                                </div>
+
+                                <Input label={"Email"} type={"text"} addclass={""} />
+
+                                <div className="w-full mt-4 flex flex-col gap-2">
+                                    <span>What can we do for you</span>
+
+                                    <select
+                                        className="border rounded-lg p-2 outline-none w-full text-gray-900 text-md">
+                                        <option value="" disabled>
+                                            Choose
+                                        </option>
+                                        <option value="option1">Ask Query</option>
+                                        <option value="option2">Delivery Flexibility</option>
+                                        <option value="option3">Payment Method</option>
+                                    </select>
+                                </div>
+                                <div className="w-full mt-4 flex flex-col gap-2">
+                                    <span>Phone Number</span>
+
+                                    <input type="tel" />
+                                </div>
+
+
+
 
                             </div>
 
-                            
+
+                        </div>
+                        <div className="w-full flex flex-col mt-4 h-96 z-0">
+                            <Map
+                                currentMarkerPosition={currentMarkerPosition}
+                            />
+
                         </div>
                     </div>
                 </div>
             </div>
-
-            Home
+            <Footer />
         </div>
     );
 }
