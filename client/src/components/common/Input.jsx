@@ -10,7 +10,7 @@ const Input = ({
 
     return (
         <>
-            <div className="flex flex-col mt-4 relative">
+            <div className="flex flex-col relative">
                 <span className="mb-2">{label}</span>
                 <input type={`${type? "text" : "password"}`} className={`bg-white 
                     outline-none

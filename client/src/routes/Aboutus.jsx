@@ -27,7 +27,7 @@ function Aboutus() {
             <div className="mt-48 flex justify-evenly">
 
                 <div className="flex flex-col gap-6">
-                    <span className="text-color-secondary text-[32px]">About Us</span>
+                    <span className="text-color-secondary text-[28px] font-allura">About Us</span>
                     <span className="text-gray-500">WE PRIDE OURSELF ON</span>
                     <div className="flex flex-col text-[24px] font-bold">
                         <span className="text-color-primary">Our authentic momo recipes</span>
@@ -118,7 +118,7 @@ function Aboutus() {
                 <img src={Quote} alt="" />
             </div>
 
-            <div className="flex flex-col gap-5 mt-9">
+            <div className="flex flex-col gap-5 mt-9 mb-16">
                 <div className="flex flex-col gap-0 items-center">
 
                     <div className="flex space-x-2 font-bold text-[28px]">

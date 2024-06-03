@@ -10,6 +10,12 @@ export default {
       'color-primary': '#D95103',
       'color-secondary': '#0c6967'
      },
+     listStyleType: {
+      circle: 'circle', // Add a custom list style type
+    },
+    fontFamily: {
+      allura: ['Allura', ''],
+    },
     },
   },
   plugins: [],

@@ -94,7 +94,7 @@ function Home() {
             </div>
 
 
-            <div className="flex flex-col items-center mt-10 gap-4">
+            <div className="flex flex-col items-center mt-10 mb-16 gap-4">
                 <div className="flex space-x-1 text-[20px] font-bold">
                     <span>Our</span>
                     <span className="text-color-primary">Most Popular</span>

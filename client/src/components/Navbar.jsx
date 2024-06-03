@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <div className="bg-white border-b w-full h-16 flex items-center justify-evenly fixed top-0 left-0 z-50">
             <div className="flex">
-                <img src={Logo} alt="" width={85} />
+                <Link to="/"><img src={Logo} alt="" width={85} /></Link>
                 <ul className="flex ml-12 space-x-8 text-sm text-gray-700">
                     <li>
                         <Link to="/aboutus" className={isActive("/aboutus") ? "text-color-secondary" : ""}>
@@ -44,7 +44,8 @@ function Navbar() {
                     <RiTiktokFill style={{ height: "20px", width: "20px", backgroundColor: "#A6AEBB", color: "white", borderRadius: "50%" }} />
                     <SlSocialInstagram style={{ height: "20px", width: "20px", backgroundColor: "#A6AEBB", color: "white", borderRadius: "50%" }} />
                 </div>
-                <Button label={"Contact Us"} color={"color-primary"} />
+                
+                <Link to="/contact"><Button label={"Contact Us"} color={"color-primary"} /></Link>
             </div>
         </div>
     );

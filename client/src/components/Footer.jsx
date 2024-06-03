@@ -12,7 +12,7 @@ function Footer() {
 
 
     return(
-        <div className="px-20 py-10 flex flex-col bg-gray-50 mt-16">
+        <div className="px-20 py-10 flex flex-col bg-gray-50">
             <div className="flex justify-between w-full">
                 <div className="flex flex-col gap-3 w-1/4">
                     <img src={Logo} alt="" width={100}/>
@@ -76,7 +76,7 @@ function Footer() {
 
             </div>
 
-            <div className="flex justify-center text-gray-400 mt-4">
+            <div className="flex justify-center text-gray-400 mt-6">
                 Copyright &copy;2023 Everest Momo Pvt Ltd. All Rights Reserved
             </div>
         </div>  
